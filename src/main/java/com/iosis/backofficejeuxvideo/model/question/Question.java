@@ -1,5 +1,6 @@
-package com.iosis.backofficejeuxvideo.model;
+package com.iosis.backofficejeuxvideo.model.question;
 
+import com.iosis.backofficejeuxvideo.model.AuditModel;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,7 +10,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name= "question")
-public class Question extends AuditModel{
+public class Question extends AuditModel {
 
     @Id
     @GeneratedValue(generator = "question_generator")

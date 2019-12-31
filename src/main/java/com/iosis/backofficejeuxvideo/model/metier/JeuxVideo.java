@@ -1,6 +1,7 @@
-package com.iosis.backofficejeuxvideo.model;
+package com.iosis.backofficejeuxvideo.model.metier;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.iosis.backofficejeuxvideo.model.AuditModel;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.OnDelete;

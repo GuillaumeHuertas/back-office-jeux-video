@@ -1,5 +1,6 @@
 package com.iosis.backofficejeuxvideo.security;
 
+import com.iosis.backofficejeuxvideo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -20,7 +21,8 @@ public class AppAuthProvider extends DaoAuthenticationProvider {
         String name = auth.getName();
         String password = auth.getCredentials()
                 .toString();
-        UserDetails user = userDetailsService.loadUserByUsername(name);
+//        UserDetails user = userDetailsService.loadUserByUsername(name);
+        UserDetails user = userDetailsService.loadUserByUsernameAndPassword(name, password);
         if (user == null) {
             throw new BadCredentialsException("Username/Password does not match for " + auth.getPrincipal());
         }

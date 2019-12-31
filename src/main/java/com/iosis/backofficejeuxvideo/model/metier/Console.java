@@ -1,5 +1,6 @@
-package com.iosis.backofficejeuxvideo.model;
+package com.iosis.backofficejeuxvideo.model.metier;
 
+import com.iosis.backofficejeuxvideo.model.AuditModel;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -7,7 +8,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "console")
-public class Console extends AuditModel{
+public class Console extends AuditModel {
 
     @Id
     @GeneratedValue(generator = "console_generator")

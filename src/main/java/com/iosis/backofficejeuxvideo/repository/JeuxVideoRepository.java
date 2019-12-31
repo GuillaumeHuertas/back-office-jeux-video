@@ -1,6 +1,6 @@
 package com.iosis.backofficejeuxvideo.repository;
 
-import com.iosis.backofficejeuxvideo.model.JeuxVideo;
+import com.iosis.backofficejeuxvideo.model.metier.JeuxVideo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

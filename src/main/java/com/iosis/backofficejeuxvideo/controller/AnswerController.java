@@ -1,7 +1,7 @@
 package com.iosis.backofficejeuxvideo.controller;
 
 import com.iosis.backofficejeuxvideo.exception.ResourceNotFoundException;
-import com.iosis.backofficejeuxvideo.model.Answer;
+import com.iosis.backofficejeuxvideo.model.question.Answer;
 import com.iosis.backofficejeuxvideo.repository.AnswerRepository;
 import com.iosis.backofficejeuxvideo.repository.QuestionRepository;
 import org.springframework.beans.factory.annotation.Autowired;

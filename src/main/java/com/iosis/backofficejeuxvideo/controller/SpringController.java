@@ -1,5 +1,6 @@
-package com.iosis.backofficejeuxvideo.security;
+package com.iosis.backofficejeuxvideo.controller;
 
+import com.iosis.backofficejeuxvideo.model.security.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;

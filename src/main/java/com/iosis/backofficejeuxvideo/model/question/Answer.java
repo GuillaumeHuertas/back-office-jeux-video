@@ -1,6 +1,7 @@
-package com.iosis.backofficejeuxvideo.model;
+package com.iosis.backofficejeuxvideo.model.question;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.iosis.backofficejeuxvideo.model.AuditModel;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.OnDelete;
@@ -10,7 +11,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "answers")
-public class Answer extends AuditModel{
+public class Answer extends AuditModel {
 
     @Id
     @GeneratedValue(generator = "answer_generator")

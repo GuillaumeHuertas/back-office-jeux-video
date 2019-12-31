@@ -1,4 +1,4 @@
-package com.iosis.backofficejeuxvideo.security;
+package com.iosis.backofficejeuxvideo.model.security;
 
 import lombok.Getter;
 import lombok.Setter;
