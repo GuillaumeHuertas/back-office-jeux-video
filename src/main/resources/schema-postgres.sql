@@ -1,0 +1,16 @@
+-- DROP TABLE IF EXISTS USER;
+--
+-- DROP SEQUENCE IF EXISTS user_sequence;
+--
+-- CREATE SEQUENCE user_sequence INCREMENT BY 1;
+--
+-- CREATE TABLE USER (
+--     user_id BIGINT DEFAULT (NEXTVAL('user_sequence')),
+--     password VARCHAR(255) NOT NULL,
+--     username VARCHAR(255) NOT NULL,
+--     isAccountNonExpired BOOLEAN NOT NULL,
+--     isAccountNonLocked BOOLEAN NOT NULL,
+--     isCredentialsNonExpired BOOLEAN NOT NULL,
+--     isEnabled BOOLEAN NOT NULL,
+--     PRIMARY KEY(user_id)
+-- );
