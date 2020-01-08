@@ -4,6 +4,7 @@ import com.iosis.backofficejeuxvideo.exception.ResourceNotFoundException;
 import com.iosis.backofficejeuxvideo.model.metier.JeuxVideo;
 import com.iosis.backofficejeuxvideo.repository.ConsoleRepository;
 import com.iosis.backofficejeuxvideo.repository.JeuxVideoRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -15,14 +16,18 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@Slf4j
 public class JeuxVideoController {
 
     private JeuxVideoRepository jeuxVideoRepository;
 
     private ConsoleRepository consoleRepository;
 
+    // Autorise l'accès par le front
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/jeuxVideos/titre/{jeuVideoTitre}")
     public List<JeuxVideo> getJeuxVideoByTitreContaining(@PathVariable String jeuVideoTitre) {
+        log.info("Coucou");
         return jeuxVideoRepository.findJeuxVideoByTitreContaining(jeuVideoTitre);
     }
 
@@ -57,6 +62,8 @@ public class JeuxVideoController {
     @PostMapping("/consoles/{consoleId}/jeuxVideos")
     public JeuxVideo addJeuxVideo(@PathVariable Long consoleId,
                                   @Valid @RequestBody JeuxVideo jeuxVideo) {
+
+        log.info(jeuxVideo + "");
         return consoleRepository.findById(consoleId)
                 .map(console -> {
                     jeuxVideo.setConsole(console);
