@@ -49,6 +49,7 @@ public class JeuxVideoController {
         return jeuxVideoRepository.findById(jeuxVideoId);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/jeuxVideos")
     public Page<JeuxVideo> getJeuxVideos(Pageable pageable) {
         return jeuxVideoRepository.findAll(pageable);
