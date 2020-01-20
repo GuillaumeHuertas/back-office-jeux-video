@@ -60,6 +60,7 @@ public class JeuxVideoController {
         return jeuxVideoRepository.findByConsoleId(consoleId);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/consoles/{consoleId}/jeuxVideos")
     public JeuxVideo addJeuxVideo(@PathVariable Long consoleId,
                                   @Valid @RequestBody JeuxVideo jeuxVideo) {
